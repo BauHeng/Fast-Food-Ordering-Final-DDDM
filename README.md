@@ -1,6 +1,4 @@
-# Fast-Food-Ordering-Final-DDDM
-
-# Optimizing Balaji Fast Food Operations through Sales Data Analysis
+# Balaji Fast Food Operations Analysis - Data - Driven Decision Making Project
 
 **Tools Used:** MySQL, Power BI, Excel
 

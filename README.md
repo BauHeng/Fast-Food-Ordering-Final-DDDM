@@ -24,9 +24,9 @@ The main goal is to optimize operations by analyzing transaction data. We examin
 * We followed a fixed weekly meeting schedule to ensure progress.
 
 ## Data Structure
-The dataset consists of **500 rows and 8 columns**. [cite_start]It contains transactional data used to understand customer behavior and delivery efficiency[cite: 84, 91].
+The dataset consists of **500 rows and 8 columns**. It contains transactional data used to understand customer behavior and delivery efficiency.
 
-[cite_start]**Source File:** `fast_food_ordering_dataset.csv` [cite: 82]
+**Source File:** `fast_food_ordering_dataset.csv`
 
 **Data Dictionary:**
 * **order_id:** Unique identifier for each order.
@@ -36,54 +36,54 @@ The dataset consists of **500 rows and 8 columns**. [cite_start]It contains tran
 * **order_value:** Order value (Numerical).
 * **delivery_time_minutes:** Delivery duration in minutes.
 * **payment_method:** Method of payment (Example: Cash, UPI).
-* [cite_start]**items_count:** Quantity of items ordered[cite: 85, 86, 87, 88, 89].
+* **items_count:** Quantity of items ordered.
 
 **Data Quality Check:**
 * **Missing Values:** 0 (The dataset is complete).
 * **Duplicates:** 0 (There are no duplicate orders).
-* [cite_start]**Consistency:** All metrics are reasonable and there are no negative order values[cite: 97, 98, 99, 101].
+* **Consistency:** All metrics are reasonable and there are no negative order values.
 
 ## Executive Summary
-We built a dashboard to track Revenue, Orders, and Average Order Value in real time. [cite_start]The analysis highlights peak operational hours and identifies the most profitable cuisine categories[cite: 149].
+We built a dashboard to track Revenue, Orders, and Average Order Value in real time. The analysis highlights peak operational hours and identifies the most profitable cuisine categories.
 
 ## Business Questions
 We used data to answer three specific questions for the business:
 
 1.  **Product Strategy:** Which cuisine type has the highest Average Order Value (AOV)?
-    * [cite_start]**Purpose:** To focus on promoting high profit groups like North Indian and Mexican cuisines[cite: 107, 108].
+    * **Purpose:** To focus on promoting high profit groups like North Indian and Mexican cuisines.
 2.  **Operations:** Which city has the longest average delivery time?
-    * [cite_start]**Purpose:** To optimize the delivery fleet or reroute drivers in that area[cite: 110, 111].
+    * **Purpose:** To optimize the delivery fleet or reroute drivers in that area.
 3.  **Growth:** Which city contributes the most in total revenue?
-    * [cite_start]**Purpose:** To identify key markets for further marketing investment[cite: 113, 114].
+    * **Purpose:** To identify key markets for further marketing investment.
 
 ## Key Insights
 Our analysis of the temporal trends and product dynamics revealed the following:
 
-* [cite_start]**Peak Operations:** There is a significant surge in order volume between **12:00 PM and 1:00 PM** which is the Lunch Rush[cite: 154].
-* [cite_start]**Downtime:** There is minimal activity observed after **10:00 PM**[cite: 155].
-* [cite_start]**Top Performers:** South Indian and Italian cuisines generate the highest revenue share[cite: 158].
+* **Peak Operations:** There is a significant surge in order volume between **12:00 PM and 1:00 PM** which is the Lunch Rush.
+* **Downtime:** There is minimal activity observed after **10:00 PM**.
+* **Top Performers:** South Indian and Italian cuisines generate the highest revenue share.
 
 ## Recommendations
 Based on the insights we propose the following strategic actions:
 
 1.  **Resource Allocation:**
-    * Increase kitchen and delivery staffing levels during the **11:00 AM to 2:00 PM** window. [cite_start]This will help mitigate delays during the lunch rush[cite: 161].
+    * Increase kitchen and delivery staffing levels during the **11:00 AM to 2:00 PM** window. This will help mitigate delays during the lunch rush.
 2.  **Inventory Optimization:**
-    * Prioritize stock for **South Indian** ingredients. [cite_start]This will prevent stockouts during high demand periods[cite: 164].
+    * Prioritize stock for **South Indian** ingredients. This will prevent stockouts during high demand periods.
 3.  **Marketing Strategy:**
-    * Implement "Happy Hour" promotions during off peak hours from **3:00 PM to 5:00 PM**. [cite_start]This will flatten the demand curve[cite: 167].
+    * Implement "Happy Hour" promotions during off peak hours from **3:00 PM to 5:00 PM**. This will flatten the demand curve.
 
 ## Technical Methodology
-[cite_start]We followed a 5 week work breakdown structure[cite: 41].
+We followed a 5 week work breakdown structure.
 
-* **Week 1 and 2:** We defined the business questions and explored the dataset. [cite_start]We cleaned the data and standardized formats for dates and currency[cite: 23, 34].
-* **Week 3:** We focused on SQL modeling. We removed null values and created clean master tables. [cite_start]We established a Star Schema to optimize query performance[cite: 169, 193].
-* [cite_start]**Week 4:** We built the dashboard with an Executive Scorecard and Time Series Analysis[cite: 140, 149].
+* **Week 1 and 2:** We defined the business questions and explored the dataset. We cleaned the data and standardized formats for dates and currency.
+* **Week 3:** We focused on SQL modeling. We removed null values and created clean master tables. We established a Star Schema to optimize query performance.
+* **Week 4:** We built the dashboard with an Executive Scorecard and Time Series Analysis.
 
 ### Data Model
-[cite_start]We used a Star Schema structure[cite: 143].
-* [cite_start]**Fact Table:** `Fact_Orders` contains metrics like Revenue and Quantity[cite: 146].
-* [cite_start]**Dimensions:** `Dim_City` and `Dim_Cuisine` contain attributes for filtering[cite: 147].
+We used a Star Schema structure.
+* **Fact Table:** `Fact_Orders` contains metrics like Revenue and Quantity.
+* **Dimensions:** `Dim_City` and `Dim_Cuisine` contain attributes for filtering.
 
 ## SQL Logic
 We used the following SQL scripts to clean, normalize, and analyze the data in MySQL.
